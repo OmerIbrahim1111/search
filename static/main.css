@@ -1,0 +1,510 @@
+body
+{
+    padding: 0;
+    margin: 0;
+}
+.container
+{
+    /* font-family: 'Cairo' , sans-serif ; */
+    font-family: 'Cairo' , system-ui , sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    background-color: #dde9e6;
+    /* background-color: li; */
+    /* background: linear-gradient(90deg, #9896F0, #FBC8D5); */
+    /* background: linear-gradient(90deg, #FBEE98, #AEEDD4); */
+    /* background: linear-gradient(90deg, #FF7183, #C0E9FE); */
+    background: linear-gradient(90deg, #D8D5ED, #F3E7EA);
+}
+.container .title
+{
+    text-transform: capitalize;
+    font-size: 50px;
+    font-weight: 100;
+    margin-bottom: 50px;
+}
+.container .test
+{
+    width: 100%;
+    height: 100%;
+    background-color: #dde9e6;
+    /* background: no-repeat url('./images/blender.jpg') ;
+    background-size: cover; */
+}
+.container .input-form
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.container .input-form form
+{
+    font-family: 'Cairo' , system-ui , sans-serif ; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid #25aec0;
+}
+.container .input-form form input
+{
+    font-family: 'Cairo' , system-ui , sans-serif ; 
+    height: 50px;
+    font-size: 16px;
+    padding-left: 10px;
+    /* border-radius: 5px; */
+    border: none;
+    width: 400px;
+}
+.container .input-form form input:focus
+{
+    outline: none;
+}
+.container .input-form form button
+{
+    font-family: 'Cairo' , system-ui , sans-serif ; 
+    cursor: pointer;
+    text-transform: capitalize;
+    height: 50px;
+    /* margin-left: 15px; */
+    /* border-radius: 5px; */
+    font-size: 16px;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    background-color: #25aec0;
+    color: white;
+    transition: all .3s ease-in-out;
+}
+.container .input-form button:hover
+{
+    background-color: #0c808f;
+}
+
+
+
+/* ---- TEST ----- */
+
+.container .test
+{
+    font-family: 'Cairo' , system-ui , sans-serif ; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container .test .btn-press
+{
+    font-family: 'Cairo' , system-ui , sans-serif ; 
+    cursor: pointer;
+    text-transform: capitalize;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: 600;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: none;
+    background-color: #00948d;
+    color: white;
+    transition: all .3s ease-in-out;
+}
+.container .test .btn-press:hover
+{
+    background-color: #0c808f;
+}
+.container .test .btn-press:disabled
+{
+    cursor:auto;
+    background-color: #32b5c7;
+}
+.container .test .btn-press:disabled:hover
+{
+    background-color: #32b5c7;
+}
+
+.container .bottom-home
+{
+    border: 1px solid #c7caca;
+    /* width: calc(100% - 300px);
+    margin-left: 150px; */
+    margin-top: 50px;
+    padding: 10px 20px;
+    width: 800px;
+    height: 400px;
+    background-color: whtie;
+}
+
+
+
+/* ---- ADMIN STYLE ----- */
+
+
+.admin
+{
+    font-family: 'Cairo' , system-ui , sans-serif;
+    display: grid;
+    grid-template-columns: 350px 1fr;
+    height: 100vh;
+    background: linear-gradient(90deg, #D8D5ED, #F3E7EA);
+}
+.admin .left
+{
+    background-color: #dde7e9;
+    padding: 15px;
+}
+.admin .left .logo
+{
+    font-family: 'Cairo' , system-ui , sans-serif ;
+    display: flex;
+    align-items: center;
+}
+.admin .left .logo span
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    font-size: 30px;
+    margin-right: 10px;
+    color: #00948d;
+}
+.admin .left h5
+{
+    font-family: 'Cairo' , system-ui , sans-serif ;
+    font-size: 30px;
+    margin: 0;
+    text-transform: capitalize;
+    color: #00948d;
+    font-weight: 700;
+}
+.admin .left .list
+{
+    margin: 0;
+    margin-top: 50px;
+    padding: 0;
+}
+.admin .left .list .list-item
+{
+    font-family: 'Cairo' , system-ui , sans-serif ;
+    position: relative;
+    cursor: pointer;
+    display: grid;
+    grid-template-columns: 40px 1fr 30px;
+    align-items: center;
+    list-style: none;
+    height: 60px;
+    margin-bottom: 10px;
+    padding: 0px 10px;
+    border-radius: 8px;
+}
+.admin .left .list .list-item .overlay
+{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: transparent;
+}
+.admin .left .list .list-item:hover
+{
+   background-color: #adc3c7;
+}
+.admin .left .list .list-item .icon
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 40px;
+    background-color: #00948d;
+    color: white;
+    border-radius: 5px;
+    font-size: 20px;
+}
+.admin .left .list .list-item .text
+{
+    text-transform: capitalize;
+    font-size: 18px;
+    font-weight: 800;
+    padding-left: 10px;
+    color: #00948d;
+}
+.admin .left .list .list-item .angle
+{
+    width: 30px;
+    height: 100%;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #00948d;
+}
+
+
+
+.admin .right
+{
+    font-family: 'Cairo' , system-ui , sans-serif ;
+    background-color: white;
+    padding: 20px;
+}
+.admin .right .add-word.active
+{
+   display: flex;
+   flex-direction: column;
+}
+.admin .right .add-word
+{
+    font-family: 'Cairo' , system-ui , sans-serif ;
+   display: none;
+}
+.admin .right .add-word h1
+{
+    font-weight: normal;
+}
+.admin .right .add-word .input-form
+{
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    /* align-items: center; */
+    /* justify-content: center; */
+}
+.admin .right .add-word .input-form form
+{
+    font-family: 'Cairo' , system-ui , sans-serif ; 
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    /* justify-content: center; */
+    /* height: 50px; */
+    margin-bottom: 30px;
+    border-radius: 10px;
+    /* overflow: hidden; */
+    /* border: 1px solid #00948d; */
+}
+.admin .right .add-word .input-form form label
+{
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: capitalize;
+    margin-bottom: 10px;
+    color: #00948d;
+}
+.admin .right .add-word .input-form form input
+{
+    font-family: 'Cairo' , system-ui , sans-serif ; 
+    height: 50px;
+    font-size: 16px;
+    padding-left: 10px;
+    border-radius: 5px;
+    border: 1px solid #00948d;
+    margin-bottom: 15px;
+    /* border: none; */
+    width: 300px;
+}
+.admin .right .add-word .input-form form input:focus
+{
+    outline: none;
+}
+.admin .right .add-word .input-form form button
+{
+    font-family: 'Cairo' , system-ui , sans-serif ; 
+    cursor: pointer;
+    text-transform: capitalize;
+    height: 50px;
+    /* margin-left: 15px; */
+    /* border-radius: 5px; */
+    font-size: 16px;
+    border: 1px solid #00948d;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    background-color: #00948d;
+    color: white;
+    transition: all .3s ease-in-out;
+}
+.admin .right .add-word .input-form button:hover
+{
+    background-color: #006149;
+}
+
+
+.admin .right .add-word table
+{
+    width: 600px;
+}
+.admin .right .add-word table tr
+{
+    height: 50px;
+    text-align: center;
+}
+.admin .right .add-word table thead .number
+{
+    width: 30px;
+}
+.admin .right .add-word table thead .word
+{
+    width: 100px;
+}
+.admin .right .add-word table thead .domain
+{
+    width: 300px;
+}
+.admin .right .add-word table thead .action
+{
+    width: 80px;
+}
+.admin .right .add-word table thead tr th:nth-child(1)
+{
+    border-radius: 8px 0 0 0px;
+}
+.admin .right .add-word table thead tr th:nth-child(4)
+{
+    border-radius: 0 8px  0 0px;
+}
+.admin .right .add-word table thead tr
+{
+    background-color: #00948d;
+    color: white;
+}
+.admin .right .add-word table tbody tr:nth-child(even)
+{
+    background-color: #dde7e9;
+}
+.admin .right .add-word table tbody tr td .word
+{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0px 10px;
+}
+.admin .right .add-word table tbody tr td .domain
+{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0px 10px;
+}
+.admin .right .add-word table tbody tr td .action
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.admin .right .add-word table tbody tr td .action .delete
+{
+    cursor: pointer;
+    width: 25px;
+    height: 25px;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    border: none;
+    background-color: #fd5252;
+    color: white;
+}
+.admin .right .add-word table tbody tr td .action .delete:hover
+{
+    background-color: #ff1f1f;
+}
+
+
+
+.admin .right .number-section.active
+{
+   display: block;
+}
+.admin .right .number-section
+{
+   display: none;
+}
+.admin .right .number-section .input-form
+{
+    display: flex;
+    flex-direction: column;
+    width: 450px;
+    /* align-items: center; */
+    /* justify-content: center; */
+}
+.admin .right .number-section .input-form form
+{
+    font-family: 'Cairo' , system-ui , sans-serif ; 
+    display: flex;
+    /* align-items: center; */
+    /* justify-content: center; */
+    height: 50px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid #00948d;
+}
+.admin .right .number-section .input-form form input
+{
+    font-family: 'Cairo' , system-ui , sans-serif ; 
+    height: 50px;
+    font-size: 16px;
+    padding-left: 10px;
+    /* border-radius: 5px; */
+    border: none;
+    width: 400px;
+}
+.admin .right .number-section .input-form form input:focus
+{
+    outline: none;
+}
+.admin .right .number-section .input-form form button
+{
+    font-family: 'Cairo' , system-ui , sans-serif ; 
+    cursor: pointer;
+    text-transform: capitalize;
+    height: 50px;
+    /* margin-left: 15px; */
+    /* border-radius: 5px; */
+    font-size: 16px;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    background-color: #00948d;
+    color: white;
+    transition: all .3s ease-in-out;
+}
+.admin .right .number-section .input-form button:hover
+{
+    background-color: #006149;
+}
+
+
+
+
+.admin .right .user-section.active
+{
+   display: block;
+}
+.admin .right .user-section
+{
+   display: none;
+}
+
+
+/* ---- ADMIN STYLE ----- */

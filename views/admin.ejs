@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name='author' content="omer ibrahim">
+    <meta name='keywords' content="project" >
+    <meta name='description' content="test description for my website and can be show in google">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=7,8,edge">
+
+
+    <link rel="stylesheet" href="./main.css">
+    <link rel="stylesheet" href="./fontawesome.css">
+    <link rel="stylesheet" href="./all.css">
+    
+
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2&family=Cairo:wght@200;300;400;500;600;700;800;900&family=Comfortaa:wght@600;700&family=Open+Sans&family=Source+Sans+Pro:ital,wght@0,300;0,700;0,900;1,900&display=swap"
+      rel="stylesheet">
+    
+   
+    <title style="font-family: 'Cairo' , tahoma;"> project </title>
+
+    </head>
+    <body>
+
+        <div class="admin">
+
+            <!-- left -->
+
+            
+            <div class="left">
+                <div class="logo">
+                    <span>
+                        <i class="fa fa-tachometer-alt"></i>
+                    </span>
+                    <h5> admin panel</h5>
+                </div>
+                <ul class="list">
+                    <li class="list-item" id="add-word">
+                        <div class="icon">
+                            <i class="fa fa-cogs" ></i>
+                        </div>
+                        <div class="text">
+                            search words
+                        </div>
+                        <div class="angle">
+                            <i class="fa fa-angle-right"></i>
+                        </div>
+                        <div class="overlay" id="add-word"></div>
+                    </li>
+                    <li class="list-item" id="number">
+                        <div class="icon">
+                            <i class="fa fa-recycle" ></i>
+                        </div>
+                        <div class="text">
+                            number of the try
+                        </div>
+                        <div class="angle">
+                            <i class="fa fa-angle-right"></i>
+                        </div>
+                        <div class="overlay" id="number"></div>
+                    </li>
+                    <li class="list-item" id="user">
+                        <div class="icon">
+                            <i class="fa fa-user" ></i>
+                        </div>
+                        <div class="text">
+                            users
+                        </div>
+                        <div class="angle">
+                            <i class="fa fa-angle-right"></i>
+                        </div>
+                        <div class="overlay" id="user"></div>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- left -->
+
+
+            <!-- right -->
+
+            <div class="right">
+                <div class="section-item add-word active" id="add-word-section">
+                    <h1>Add Words</h1>
+                    <div class="input-form">
+                        <form action="/admin/addword" method="post">
+                            <label for="word"> add word </label>
+                            <input  id="word"  name="word" placeholder="add words ..."  >
+                            <label for="domain"> add domain </label>
+                            <input  id="domain"  name="domain" placeholder="www.example.com ..."  >
+                            <button>add</button>
+                        </form>
+                    </div>
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <th class="number">#</th>
+                                <th class="word">word</th>
+                                <th class="domain">domain</th>
+                                <th class="action"> action </th>
+                            </tr>
+                        </thead>
+                        <tbody id="tbody">
+
+                            <% for ( let i = 0 ; i < searches.length ; i++ ) { %>
+                                <tr>
+                                    <td><%= i + 1 %></td>
+                                    <td>
+                                        <div class="word">
+                                            <%= searches[i].word %>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="domain">
+                                            <%= searches[i].domain %>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <!-- <div> -->
+                                            <form action="/search/delete" method="post" class="action">
+                                                <input type="hidden" name="searchId" value="<%= searches[i]._id %>" >
+                                                <button class="delete" >
+                                                    <i class="fa fa-times"></i>
+                                                </button>
+                                            </form>
+                                        <!-- </div> -->
+                                    </td>
+                                </tr>
+                            <% } %>
+                            
+                        </tbody>
+                    </table>
+                    <div id="test"></div>
+                </div>
+                
+
+
+                <!-- NUMBER AND TIME -->
+
+                <div class="number-section" id="number-section">
+                    <h1>number of the try</h1>
+                    <h3>number of the try in 1 hour : <strong> <%= trying %> </strong></h3>
+                    <div class="input-form">
+                        <form action="/number" method="post">
+                            <input type="number"  id="trying"  name="trying" placeholder="number of try ..."  >
+                            <button>add</button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- NUMBER AND TIME -->
+
+                
+                <!-- USERS AND ADMIN -->
+
+                <div class="user-section" id="user-section">
+                    <h1>user and admin</h1>
+                </div>
+
+                <!-- USERS AND ADMIN -->
+
+            </div>
+
+            <!-- right -->
+
+
+            
+
+        </div>
+
+    
+    
+    <script>
+        
+        
+
+        const list = document.querySelectorAll('.list-item')
+        const addword = document.getElementById('add-word-section')
+        const number = document.getElementById('number-section')
+        const user = document.getElementById('user-section')
+        function activeSection() {
+            console.log(event.target.id)
+                addword.classList.remove("active")
+                number.classList.remove("active")
+                user.classList.remove("active")
+            switch (event.target.id) {
+                case 'add-word':
+                    console.log(1)
+                    addword.classList.add('active')
+                    break;
+                case 'number':
+                    number.classList.add("active")
+                    break;
+                case 'user':
+                    user.classList.add("active")
+                    break;
+            
+                default:
+                    break;
+            }
+        }
+        list.forEach( (item ) => 
+            item.addEventListener('click' , activeSection )
+        )
+        
+    </script>
+
+    
+
+    
+    <script src="./all.js"></script>
+    <script src="./fontawesome.js"></script>
+    <script src="./jquery.min.js"></script>
+    </body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name='author' content="omer ibrahim">
+    <meta name='keywords' content="project" >
+    <meta name='description' content="test description for my website and can be show in google">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=7,8,edge">
+    
+    <link rel="icon" href="./image/icons/009-setting.png" type="image\png">
+    <!-- <link rel="stylesheet" href="./css/bootstrap.css"> -->
+    <link rel="stylesheet" href="./main.css">
+    <link rel="stylesheet" href="./fontawesome.css">
+    <link rel="icon" href="./image/head.png" type="image\png">
+    <link rel="stylesheet" href="./all.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100;200;500;600;700;800;900&family=Readex+Pro:wght@200;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="./hamburgers.min.css" rel="stylesheet" media="all">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100;200;300;400;500;600&family=Noto+Sans+Arabic:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100;200;300;400;500;600&family=Noto+Sans+Arabic:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2&family=Comfortaa:wght@700&800&900&family=Open+Sans&family=Source+Sans+Pro:ital,wght@0,300;0,700;0,900;1,900&display=swap" rel="stylesheet"><link
+      href="https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2&family=Cairo:wght@200;300;400;500;600;700;800;900&family=Comfortaa:wght@600;700&family=Open+Sans&family=Source+Sans+Pro:ital,wght@0,300;0,700;0,900;1,900&display=swap"
+      rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100;200;300;400;500;600&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap"
+      rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100;200;300;400;500;600&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <title>project </title>
+  </head>
+  <body>
+
+
+    <div class="container">
+        <!-- <h1><%= word %></h1> -->
+        <div class="test">
+            <button id='btn-press' class="btn-press" onclick="btn()">
+              
+            </button>
+        </div>
+    </div>
+
+    <script>
+
+      const button = document.getElementById('btn-press')
+      button.innerHTML = '<%= word %>'
+      let toggle = false
+      
+      function btn() {
+        if( !toggle ) {
+            button.innerHTML = 'loading ...'
+            button.disabled = true 
+          setTimeout(() => {
+            toggle = true
+            button.disabled = false 
+            button.innerHTML = 'back'
+          }, 30000);
+        } else {
+          window.location.href = '/'
+        }
+      }
+
+    </script>
+    <script src="./fontawesome.js"></script>
+    <script src="./jquery.min.js"></script>
+    <script src="./all.js"></script>
+  </body>
+</html>
